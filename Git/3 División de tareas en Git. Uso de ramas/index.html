@@ -708,7 +708,7 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <p>a partir de entonces ya puede generar su rama de trabajo para la tarea actual, partiendo del estado actual de la rama <code>main</code>:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-xxx
 </code></pre></div>
-<p>Realizará el desarrollo de la función asignada dentro de esta rama, y cuando termine subirá los cambios. Nótese que estamos generando una rama con el mismo nombre en <code>GitHub</code>:</p>
+<p>Realizará el desarrollo de la función asignada dentro de esta rama, y cuando termine subirá los cambios a su rama. Nótese que estamos generando una rama con el mismo nombre en <code>GitHub</code>:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>feature-xxx
 </code></pre></div>
 <h2 id="integrador-desea-procesar-la-tarea-x">Integrador desea procesar la tarea X<a class="headerlink" href="#integrador-desea-procesar-la-tarea-x" title="Permanent link">&para;</a></h2>
@@ -733,6 +733,7 @@ git<span class="w"> </span>merge<span class="w"> </span>feature-xxx
 <span class="c1"># 6. Subir el resultado a GitHub</span>
 git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
 </code></pre></div>
+<p>En el paso de la mezcla es posible que surjan conflictos. En este caso, al trabajar varios usuarios con el mismo fichero,  e incluso dentro del mismo método,  existe un peligro potencial. En otro documento veremos como solventar estos conflictos. De momento los evitaremos evitando lanzar a los desarrolladores en paralelo. Así, evitamos modificar el mismo fichero por varias personas simultáneamente.</p>
 <h2 id="integrador-hace-limpieza-de-la-rama-innecesaria">Integrador hace limpieza de la rama innecesaria<a class="headerlink" href="#integrador-hace-limpieza-de-la-rama-innecesaria" title="Permanent link">&para;</a></h2>
 <p>Si las ramas ya no son necesarias el Integrador debería borrarlas</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature-xxx
