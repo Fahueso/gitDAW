@@ -820,7 +820,7 @@ Recuerda inicializar Git en tu sesión de usuario. Si no lo hiciste ya, revisa l
 </ul>
 <p>Si IntelliJ detecta que tienes Git instalado en tu ordenador, te aparecerá un check bajo el nombre del proyecto. No lo pulsaremos para hacer el comando equivalente por consola.
 <img alt="Pasted image 20251208121344.png" src="../_assets/Pasted%20image%2020251208121344.png" /></p>
-<p>Una vez generado el proyecto Java observa el fichero .gitignore con el siguiente contenido. Este fichero marca los archivos que no se subirán al repositorio. Así, evitamos subir,  por ejemplo, los ficheros ejecutable.</p>
+<p>Una vez generado el proyecto Java observa el fichero .gitignore con el siguiente contenido. Este fichero marca los archivos que no se subirán al repositorio.</p>
 <div class="highlight"><pre><span></span><code>### IntelliJ IDEA ###  
 out/  
 !**/src/main/**/out/  
@@ -851,7 +851,7 @@ bin/
 ### Mac OS ###  
 .DS_Store
 </code></pre></div>
-<p>Esto nos viene muy bien, dado que de esta manera no guardaremos en el Git todos los archivos que IntelliJ genera para la gestión del proyecto, y para sus compilados.</p>
+<p>Así, no guardaremos en el Git todos los archivos que IntelliJ genera para la gestión del proyecto, y para sus compilados.</p>
 <p><strong>Como ya sabemos IntelliJ genera un fichero Main.java a efectos demostrativos. Como no lo necesitamos en este proyecto procedemos a borrarlo desde el IDE.</strong></p>
 <h3 id="12-inicializar-git-por-consola">1.2 Inicializar Git (por consola)<a class="headerlink" href="#12-inicializar-git-por-consola" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code><span class="c1"># Moverse a la carpeta raíz del proyecto</span>
