@@ -662,11 +662,10 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <p>Por último el Integrador comunica la URL del repositorio y publica las diferentes tareas a realizar. Organiza el trabajo para que los desarrolladores se repartan todas las tareas de manera eficiente.</p>
 <h2 id="desarrollador-comienza-la-tarea-x">Desarrollador comienza la Tarea X<a class="headerlink" href="#desarrollador-comienza-la-tarea-x" title="Permanent link">&para;</a></h2>
 <p>Supongamos que este desarrollador es nuevo en el proyecto, por lo que necesita traerse a su PC el código fuente del repositorio.</p>
-<p>Para ello ejecuta:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/tu-usuario/frutas-colaborativo.git
-<span class="nb">cd</span><span class="w"> </span>frutas-colaborativo
-</code></pre></div>
-<p>a partir de entonces ya puede generar su rama de trabajo para la tarea actual, partiendo del estado actual de la rama <code>main</code>:</p>
+<p>Para ello ejecuta en IntelliJ File&gt;New Project from Version Control</p>
+<p><img alt="Pasted image 20251214193238.png" src="../_assets/Pasted%20image%2020251214193238.png" /></p>
+<p>a partir de entonces ya puede generar su rama de trabajo para la tarea actual, partiendo del estado actual de la rama `main:</p>
+<p><img alt="Pasted image 20251214193624.png" src="../_assets/Pasted%20image%2020251214193624.png" /></p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-xxx
 </code></pre></div>
 <p>Realizará el desarrollo de la función asignada dentro de esta rama, y cuando termine subirá los cambios a su rama. Nótese que estamos generando una rama con el mismo nombre en <code>GitHub</code>:</p>

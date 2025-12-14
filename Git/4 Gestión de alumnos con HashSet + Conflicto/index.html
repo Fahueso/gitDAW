@@ -654,7 +654,7 @@ git<span class="w"> </span>merge<span class="w"> </span>origin/feature-listar
 <h3 id="3-mezclar-feature-borrar-en-main-conflicto-garantizado">3. Mezclar <code>feature-borrar</code> en <code>main</code> (conflicto garantizado)<a class="headerlink" href="#3-mezclar-feature-borrar-en-main-conflicto-garantizado" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>feature-anadir
 git<span class="w"> </span>checkout<span class="w"> </span>main
-git<span class="w"> </span>merge<span class="w"> </span>feature-borrar
+git<span class="w"> </span>merge<span class="w"> </span>origin/feature-borrar
 </code></pre></div>
 <p>Git mostrará:</p>
 <div class="highlight"><pre><span></span><code>CONFLICT (content): Merge conflict in AlumnosApp.java
@@ -705,6 +705,16 @@ Automatic merge failed; fix conflicts and then commit the result.
 <p>Guardar y:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>AlumnosApp.java
 git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Resuelto conflicto entre feature-anadir y feature-borrar&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
+</code></pre></div>
+<p>Por último borra las ramas de desarrollo:</p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature-anadir
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature-borrar
+git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature-listar
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>feature-anadir
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>feature-borrar
+git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>feature-listar
 </code></pre></div>
 <hr />
 
