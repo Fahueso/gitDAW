@@ -674,32 +674,16 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <p><img alt="Pasted image 20251214194707.png" src="../_assets/Pasted%20image%2020251214194707.png" /></p>
 <p>Pulsa el botón <code>Fetch</code> y recupera la rama remota.</p>
 <p><img alt="Pasted image 20251214194739.png" src="../_assets/Pasted%20image%2020251214194739.png" /></p>
-<div class="highlight"><pre><span></span><code><span class="c1"># 1. Asegurarse de estar en main y tenerlo actualizado</span>
-git<span class="w"> </span>checkout<span class="w"> </span>main
-git<span class="w"> </span>pull<span class="w"> </span>origin<span class="w"> </span>main
-
-<span class="c1"># 2. Traer la rama del desarrollador</span>
-git<span class="w"> </span>fetch<span class="w"> </span>origin<span class="w"> </span>feature-xxx
-git<span class="w"> </span>checkout<span class="w"> </span>feature-xxx<span class="w">          </span>
-
-<span class="c1"># 3. Probar la funcionalidad</span>
-
-<span class="c1"># 4. Volver a main y hacer el merge</span>
-git<span class="w"> </span>checkout<span class="w"> </span>main
-git<span class="w"> </span>merge<span class="w"> </span>feature-xxx
-
-<span class="c1"># 5. Resolver conflictos si los hay, luego confirmar el merge</span>
-<span class="c1"># (si no hay conflictos, Git crea el commit de merge automáticamente)</span>
-
-<span class="c1"># 6. Subir el resultado a GitHub</span>
-git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>main
-</code></pre></div>
-<p>En el paso de la mezcla es posible que surjan conflictos. En este caso, al trabajar varios usuarios con el mismo fichero,  e incluso dentro del mismo método,  existe un peligro potencial. En otro documento veremos como solventar estos conflictos. De momento los evitaremos evitando lanzar a los desarrolladores en paralelo. Así, evitamos modificar el mismo fichero por varias personas simultáneamente.</p>
+<p>Pulsa sobre <code>feature-listar</code> y hace checkout:</p>
+<p><img alt="Pasted image 20251214194915.png" src="../_assets/Pasted%20image%2020251214194915.png" /></p>
+<p>Probará el código fuente de la rama, y si este funciona, procederá al mezclado. Para ello, haremos checkout sobre <code>master</code> y haremos la mezcla:</p>
+<p><img alt="Pasted image 20251214195058.png" src="../_assets/Pasted%20image%2020251214195058.png" /></p>
+<p>Una vez mezclado podemos hacer <code>push</code> sobre la rama <code>master</code>:</p>
+<p><img alt="Pasted image 20251214195539.png" src="../_assets/Pasted%20image%2020251214195539.png" /></p>
 <h2 id="integrador-hace-limpieza-de-la-rama-innecesaria">Integrador hace limpieza de la rama innecesaria<a class="headerlink" href="#integrador-hace-limpieza-de-la-rama-innecesaria" title="Permanent link">&para;</a></h2>
 <p>Si las ramas ya no son necesarias el Integrador debería borrarlas</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>feature-xxx
-git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>feature-xxx<span class="w"> </span>
-</code></pre></div>
+<p><img alt="Pasted image 20251214195621.png" src="../_assets/Pasted%20image%2020251214195621.png" /></p>
+<p><img alt="Pasted image 20251214195657.png" src="../_assets/Pasted%20image%2020251214195657.png" /></p>
 <h2 id="integrador-ya-ha-procesado-todas-las-tareas">Integrador ya ha procesado todas las tareas<a class="headerlink" href="#integrador-ya-ha-procesado-todas-las-tareas" title="Permanent link">&para;</a></h2>
 <p>Cuando todas las tareas ya se hayan integrado, es recomendable establecer un <code>tag</code>, ya que se trata de una versión con funcionalidad completa. Para ello realiza los siguientes comandos:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>tag<span class="w"> </span>v1.0-final
