@@ -461,7 +461,7 @@
 </ul>
 <h1 id="fase-1">Fase 1<a class="headerlink" href="#fase-1" title="Permanent link">&para;</a></h1>
 <h2 id="generacion-del-esqueleto-y-diseno-de-las-tareas-rol-integrador">Generación del esqueleto y diseño de las tareas (Rol Integrador)<a class="headerlink" href="#generacion-del-esqueleto-y-diseno-de-las-tareas-rol-integrador" title="Permanent link">&para;</a></h2>
-<p>Crea un proyecto Java en  IntelliJ, inicializando el repositorio. Recuerda, que de momento vamos a utilizar siempre la consola. </p>
+<p>Crea un proyecto Java en  IntelliJ, inicializando el repositorio. En esta primera fase vamos a utilizar la consola para las operaciones de <code>Git</code></p>
 <p>Edita el archivo <code>FrutasApp.java</code> con el siguiente contenido base:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
@@ -604,7 +604,7 @@ Cada función a desarrollar se va a separar en el desarrollo empleando una nueva
 </tbody>
 </table>
 <p>Es importante el orden en el que se realizan las tareas, ya que como mínimo <code>añadirFruta</code> es necesario para que el <code>ArrayList</code> tenga elementos para probar.</p>
-<h2 id="desarrollador-trabaja-en-feature-anadir-tarea-1">Desarrollador trabaja en <code>feature-añadir</code> (Tarea 1).<a class="headerlink" href="#desarrollador-trabaja-en-feature-anadir-tarea-1" title="Permanent link">&para;</a></h2>
+<h2 id="integrador-trabaja-en-feature-anadir-tarea-1">Integrador trabaja en <code>feature-añadir</code> (Tarea 1).<a class="headerlink" href="#integrador-trabaja-en-feature-anadir-tarea-1" title="Permanent link">&para;</a></h2>
 <p>El desarrollador se encuentra inicialmente en la rama <code>main</code>. No debe realizar los <code>commits</code> en esa rama, ya que el Integrador así lo ha decidido.</p>
 <p>La tarea 1 requiere realizar el trabajo en la rama denominada 'feature-añadir'. Esta rama no está creada todavía por lo que vamos a ejecutar el comando para inicializar y posicionarse en dicha rama.</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-añadir
@@ -632,7 +632,7 @@ Cada función a desarrollar se va a separar en el desarrollo empleando una nueva
 git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Implementada función añadirFruta&quot;</span>
 </code></pre></div>
 <p>El desarrollador da por terminada la tarea 1, cosa que notifica el Integrador. Nota: El desarrollador no crea ningún <code>tag</code>.</p>
-<h2 id="integrador-trabaja-en-feature-anadir-tarea-1">Integrador trabaja en <code>feature-añadir</code> (Tarea 1).<a class="headerlink" href="#integrador-trabaja-en-feature-anadir-tarea-1" title="Permanent link">&para;</a></h2>
+<h2 id="integrador-trabaja-en-feature-anadir-tarea-1_1">Integrador trabaja en <code>feature-añadir</code> (Tarea 1).<a class="headerlink" href="#integrador-trabaja-en-feature-anadir-tarea-1_1" title="Permanent link">&para;</a></h2>
 <p>Una vez notificado por parte del Desarrollador la finalización de la Tarea 1 el integrador realizará los siguientes pasos:</p>
 <p>Asegurarse que se encuentra en la rama <code>main</code>.</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
@@ -667,7 +667,10 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <p>a partir de entonces ya puede generar su rama de trabajo para la tarea actual, partiendo del estado actual de la rama `main:</p>
 <p><img alt="Pasted image 20251214193624.png" src="../_assets/Pasted%20image%2020251214193624.png" /></p>
 <p><img alt="Pasted image 20251214193746.png" src="../_assets/Pasted%20image%2020251214193746.png" /></p>
-<p>Esto posicionará la rama activa a la requerida. Realizará el desarrollo de la función asignada dentro de esta rama, y cuando termine subirá los cambios a su rama local y remota (Commit and Push). Nótese que automáticamente IntelliJ creará una rama del mismo nombre en Github dado que no existía inicialmente.</p>
+<p>Esto lo posicionará la rama activa a la requerida. </p>
+<p><img alt="Pasted image 20251214200510.png" src="../_assets/Pasted%20image%2020251214200510.png" /></p>
+<p>La rama <code>feature-borrar</code> está posicionada como actual.</p>
+<p>Realizará el desarrollo de la función asignada dentro de esta rama, y cuando termine subirá los cambios a su rama local y remota (Commit and Push). Nótese que automáticamente IntelliJ creará una rama del mismo nombre en Github dado que no existía inicialmente.</p>
 <p><img alt="Pasted image 20251214194018.png" src="../_assets/Pasted%20image%2020251214194018.png" /></p>
 <h2 id="integrador-desea-procesar-la-tarea-x">Integrador desea procesar la tarea X<a class="headerlink" href="#integrador-desea-procesar-la-tarea-x" title="Permanent link">&para;</a></h2>
 <p>El integrador es conocedor de que algún desarrollador ha completado una tarea de desarrollo, y tiene localizada la rama <code>feature-xxx</code>. Ahora realiza una serie de paso para llevar todo ese trabajo a la rama <code>main</code>.</p>
@@ -685,10 +688,8 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <p><img alt="Pasted image 20251214195621.png" src="../_assets/Pasted%20image%2020251214195621.png" /></p>
 <p><img alt="Pasted image 20251214195657.png" src="../_assets/Pasted%20image%2020251214195657.png" /></p>
 <h2 id="integrador-ya-ha-procesado-todas-las-tareas">Integrador ya ha procesado todas las tareas<a class="headerlink" href="#integrador-ya-ha-procesado-todas-las-tareas" title="Permanent link">&para;</a></h2>
-<p>Cuando todas las tareas ya se hayan integrado, es recomendable establecer un <code>tag</code>, ya que se trata de una versión con funcionalidad completa. Para ello realiza los siguientes comandos:</p>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>tag<span class="w"> </span>v1.0-final
-git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>v1.0-final
-</code></pre></div>
+<p>Cuando todas las tareas ya se hayan integrado, es recomendable establecer un <code>tag</code>, ya que se trata de una versión con funcionalidad completa.</p>
+<p><img alt="Pasted image 20251214195908.png" src="../_assets/Pasted%20image%2020251214195908.png" /></p>
 <h2 id="anexo-codigo-fuente-final">Anexo: código fuente final<a class="headerlink" href="#anexo-codigo-fuente-final" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
