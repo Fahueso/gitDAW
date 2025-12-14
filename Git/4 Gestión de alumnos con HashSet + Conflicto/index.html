@@ -461,6 +461,12 @@
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashSet</span><span class="p">;</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
 
+<span class="cm">/**</span>
+<span class="cm"> * Aplicación de gestión de alumnos usando HashSet.</span>
+<span class="cm"> * Las funciones están definidas pero no implementadas.</span>
+<span class="cm"> * Cada desarrollador debe implementar su función y documentarla.</span>
+<span class="cm"> * @author Integrador1</span>
+<span class="cm"> */</span>
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AlumnosApp</span><span class="w"> </span><span class="p">{</span>
 
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -479,13 +485,13 @@
 
 <span class="w">            </span><span class="k">switch</span><span class="p">(</span><span class="n">opcion</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span>
-<span class="w">                    </span><span class="n">funcionAnadir</span><span class="p">(</span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">sc</span><span class="p">);</span><span class="w">   </span><span class="c1">// ← se implementará en ramas</span>
+<span class="w">                    </span><span class="n">funcionAnadir</span><span class="p">(</span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">sc</span><span class="p">);</span>
 <span class="w">                    </span><span class="k">break</span><span class="p">;</span>
 <span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">2</span><span class="p">:</span>
-<span class="w">                    </span><span class="n">funcionBorrar</span><span class="p">(</span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">sc</span><span class="p">);</span><span class="w">   </span><span class="c1">// ← se implementará en ramas</span>
+<span class="w">                    </span><span class="n">funcionBorrar</span><span class="p">(</span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">sc</span><span class="p">);</span>
 <span class="w">                    </span><span class="k">break</span><span class="p">;</span>
 <span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">3</span><span class="p">:</span>
-<span class="w">                    </span><span class="n">funcionListar</span><span class="p">(</span><span class="n">alumnos</span><span class="p">);</span><span class="w">       </span><span class="c1">// ← se implementará en ramas</span>
+<span class="w">                    </span><span class="n">funcionListar</span><span class="p">(</span><span class="n">alumnos</span><span class="p">);</span>
 <span class="w">                    </span><span class="k">break</span><span class="p">;</span>
 <span class="w">                </span><span class="k">case</span><span class="w"> </span><span class="mi">4</span><span class="p">:</span>
 <span class="w">                    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Adiós&quot;</span><span class="p">);</span>
@@ -496,15 +502,29 @@
 <span class="w">        </span><span class="p">}</span>
 <span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="c1">// Funciones vacías para que las ramas las implementen</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Función a implementar por el desarrollador de la rama feature-anadir.</span>
+<span class="cm">     * Debe añadir un alumno al HashSet.</span>
+<span class="cm">     * El desarrollador debe completar el Javadoc y la implementación.</span>
+<span class="cm">     */</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionAnadir</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Función no implementada.&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Función a implementar por el desarrollador de la rama feature-borrar.</span>
+<span class="cm">     * Debe borrar un alumno del HashSet.</span>
+<span class="cm">     * El desarrollador debe completar el Javadoc y la implementación.</span>
+<span class="cm">     */</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionBorrar</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Función no implementada.&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
 
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * Función a implementar por el desarrollador de la rama feature-listar.</span>
+<span class="cm">     * Debe mostrar todos los alumnos del HashSet.</span>
+<span class="cm">     * El desarrollador debe completar el Javadoc y la implementación.</span>
+<span class="cm">     */</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionListar</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Función no implementada.&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="p">}</span>
@@ -525,7 +545,13 @@
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-anadir
 </code></pre></div>
 <p>Implementa la función <strong>case 1</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionAnadir</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Añade un alumno al conjunto si no existe previamente.</span>
+<span class="cm"> * @param alumnos Conjunto HashSet donde se almacenan los alumnos.</span>
+<span class="cm"> * @param sc Scanner para leer el nombre del alumno.</span>
+<span class="cm"> * @author Ana</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionAnadir</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Nombre del alumno a añadir: &quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
 <span class="w">    </span><span class="n">alumnos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
@@ -541,12 +567,24 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-borrar
 </code></pre></div>
 <p>Modifica <strong>case 1 también</strong>, accidentalmente (forzamos conflicto):</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionAnadir</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Implementación temporal. Pendiente de revisión.</span>
+<span class="cm"> * @param alumnos Conjunto HashSet.</span>
+<span class="cm"> * @param sc Scanner para entrada de datos.</span>
+<span class="cm"> * @author Luis</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionAnadir</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Añadir alumno (pendiente)&quot;</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Y crea la función del <strong>case 2</strong> correctamente:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionBorrar</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Elimina un alumno del conjunto si está presente.</span>
+<span class="cm"> * @param alumnos Conjunto HashSet donde se almacenan los alumnos.</span>
+<span class="cm"> * @param sc Scanner para leer el nombre del alumno a borrar.</span>
+<span class="cm"> * @author Luis</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionBorrar</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Nombre del alumno a borrar: &quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
 <span class="w">    </span><span class="n">alumnos</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
@@ -562,7 +600,12 @@ git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </sp
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-listar
 </code></pre></div>
 <p>Modifica <strong>case 3</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionListar</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Muestra por pantalla todos los alumnos del conjunto.</span>
+<span class="cm"> * @param alumnos Conjunto HashSet con los alumnos almacenados.</span>
+<span class="cm"> * @author Marta</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionListar</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Listado de alumnos:&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">Iterator</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alumnos</span><span class="p">.</span><span class="na">iterator</span><span class="p">();</span>
 <span class="w">    </span><span class="k">while</span><span class="p">(</span><span class="n">it</span><span class="p">.</span><span class="na">hasNext</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
@@ -593,19 +636,39 @@ Automatic merge failed; fix conflicts and then commit the result.
 <hr />
 <h1 id="5-resolucion-del-conflicto"><strong>5. Resolución del conflicto</strong><a class="headerlink" href="#5-resolucion-del-conflicto" title="Permanent link">&para;</a></h1>
 <p>Dentro de la función que apunta el <code>case 1</code> aparecerá:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionAnadir</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="o">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><span class="w"> </span><span class="n">HEAD</span>
+<div class="highlight"><pre><span></span><code><span class="o">&lt;&lt;&lt;&lt;&lt;&lt;&lt;</span><span class="w"> </span><span class="n">HEAD</span>
+<span class="cm">/**</span>
+<span class="cm"> * Añade un alumno al conjunto si no existe previamente.</span>
+<span class="cm"> * @param alumnos Conjunto HashSet donde se almacenan los alumnos.</span>
+<span class="cm"> * @param sc Scanner para leer el nombre del alumno.</span>
+<span class="cm"> * @author Ana</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionAnadir</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Nombre del alumno a añadir: &quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
 <span class="w">    </span><span class="n">alumnos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Alumno añadido.&quot;</span><span class="p">);</span>
-<span class="o">=======</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Añadir alumno (pendiente)&quot;</span><span class="p">);</span>
-<span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span><span class="w"> </span><span class="n">feature</span><span class="o">-</span><span class="n">borrar</span>
 <span class="p">}</span>
+<span class="o">=======</span>
+<span class="cm">/**</span>
+<span class="cm"> * Implementación temporal. Pendiente de revisión.</span>
+<span class="cm"> * @param alumnos Conjunto HashSet.</span>
+<span class="cm"> * @param sc Scanner para entrada de datos.</span>
+<span class="cm"> * @author Luis</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionAnadir</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Añadir alumno (pendiente)&quot;</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="o">&gt;&gt;&gt;&gt;&gt;&gt;&gt;</span><span class="w"> </span><span class="n">feature</span><span class="o">-</span><span class="n">borrar</span>
 </code></pre></div>
 <p>✅ Solución correcta:</p>
-<div class="highlight"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionAnadir</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
+<span class="cm"> * Añade un alumno al conjunto si no existe previamente.</span>
+<span class="cm"> * @param alumnos Conjunto HashSet donde se almacenan los alumnos.</span>
+<span class="cm"> * @param sc Scanner para leer el nombre del alumno.</span>
+<span class="cm"> * @author Ana</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionAnadir</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Nombre del alumno a añadir: &quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
 <span class="w">    </span><span class="n">alumnos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
