@@ -552,57 +552,36 @@ git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </
 <hr />
 <h1 id="3-cambios-que-deben-hacer-y-donde-estara-el-conflicto"><strong>3. Cambios que deben hacer (y dónde estará el conflicto)</strong><a class="headerlink" href="#3-cambios-que-deben-hacer-y-donde-estara-el-conflicto" title="Permanent link">&para;</a></h1>
 <h2 id="rama-1-feature-anadir">Rama 1: <code>feature-anadir</code><a class="headerlink" href="#rama-1-feature-anadir" title="Permanent link">&para;</a></h2>
-<p>Recupera el proyecto desde <code>GitHub</code>. Esta vez vamos a utilizar la utilidad de IntelliJ:</p>
-<ol>
-<li><strong>File → New → Project from Version Control</strong></li>
-<li>
-<p>En la ventana:</p>
-</li>
-<li>
-<p>URL: <code>https://github.com/TU-USUARIO/ConflictoHashSet.git</code></p>
-</li>
-<li>
-<p>Directory: donde quieran guardarlo</p>
-</li>
-<li>
-<p>Clic en <strong>Clone</strong></p>
-</li>
-</ol>
-<p>IntelliJ abrirá el proyecto automáticamente.</p>
-<p>Además puede crear su propia rama:</p>
-<p>En la esquina inferior derecha:</p>
-<ol>
-<li>Clic en el nombre de la rama (<code>main</code>)</li>
-<li>Seleccionar <strong>New Branch…</strong></li>
-<li>Escribir:<ul>
-<li><code>feature-anadir</code></li>
-</ul>
-</li>
-<li>Activar <strong>Checkout branch</strong> (para cambiarse a ella)</li>
-</ol>
-<p>Implementa la función <strong>case 1</strong>:</p>
-<div class="highlight"><pre><span></span><code><span class="cm">/**</span>
-<span class="cm"> * Añade un alumno al conjunto si no existe previamente.</span>
-<span class="cm"> * @param alumnos Conjunto HashSet donde se almacenan los alumnos.</span>
-<span class="cm"> * @param sc Scanner para leer el nombre del alumno.</span>
-<span class="cm"> * @author Ana</span>
-<span class="cm"> */</span>
-<span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">funcionAnadir</span><span class="p">(</span><span class="n">HashSet</span><span class="w"> </span><span class="n">alumnos</span><span class="p">,</span><span class="w"> </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Nombre del alumno a añadir: &quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
-<span class="w">    </span><span class="n">alumnos</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
-<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Alumno añadido.&quot;</span><span class="p">);</span>
-<span class="p">}</span>
+<p>Recupera el proyecto desde <code>GitHub</code></p>
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/TU-USUARIO/fp-hashset-conflicto.git
+<span class="nb">cd</span><span class="w"> </span>fp-hashset-conflicto
+git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-anadir
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>Implementa la función **case 1**:
+
+```java
+/**
+ * Añade un alumno al conjunto si no existe previamente.
+ * @param alumnos Conjunto HashSet donde se almacenan los alumnos.
+ * @param sc Scanner para leer el nombre del alumno.
+ * @author Ana
+ */
+public static void funcionAnadir(HashSet alumnos, Scanner sc) {
+    System.out.print(&quot;Nombre del alumno a añadir: &quot;);
+    String nombre = sc.nextLine();
+    alumnos.add(nombre);
+    System.out.println(&quot;Alumno añadido.&quot;);
+}
 </code></pre></div>
 <p>Commit:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>AlumnosApp.java
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Implementada funcionAnadir con Javadoc&quot;</span>
-git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>feature-anadir
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Implementada función añadir alumno&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>feature-añadir
 </code></pre></div>
 <hr />
 <h2 id="rama-2-feature-borrar-esta-provocara-el-conflicto">Rama 2: <code>feature-borrar</code> (esta provocará el conflicto)<a class="headerlink" href="#rama-2-feature-borrar-esta-provocara-el-conflicto" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/TU-USUARIO/ConflictoHashSet.git
-<span class="nb">cd</span><span class="w"> </span>ConflictoHashSet
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/TU-USUARIO/fp-hashset-conflicto.git
+<span class="nb">cd</span><span class="w"> </span>fp-hashset-conflicto
 git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-borrar
 </code></pre></div>
 <p>Modifica <strong>case 1 también</strong>, accidentalmente (forzamos conflicto):</p>
@@ -632,13 +611,13 @@ git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </
 </code></pre></div>
 <p>Commit:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>AlumnosApp.java
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Implementada funcionBorrar y cambio temporal en funcionAnadir&quot;</span>
-git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>feature-borrar
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Implementada funcionBorrar con Javadoc y cambio temporal en funcionAnadir&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>feature-borrar
 </code></pre></div>
 <hr />
 <h2 id="rama-3-feature-listar">Rama 3: <code>feature-listar</code><a class="headerlink" href="#rama-3-feature-listar" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/TU-USUARIO/ConflictoHashSet.git
-<span class="nb">cd</span><span class="w"> </span>ConflictoHashSet
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/TU-USUARIO/fp-hashset-conflicto.git
+<span class="nb">cd</span><span class="w"> </span>fp-hashset-conflicto
 git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </span>feature-listar
 </code></pre></div>
 <p>Modifica <strong>case 3</strong>:</p>
@@ -657,20 +636,25 @@ git<span class="w"> </span>checkout<span class="w"> </span>-b<span class="w"> </
 </code></pre></div>
 <p>Commit:</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>add<span class="w"> </span>AlumnosApp.java
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Implementada funcionListar con Javadoc&quot;</span>
-git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>feature-listar
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;Implementada función listar alumnos&quot;</span>
+git<span class="w"> </span>push<span class="w"> </span>--set-upstream<span class="w"> </span>origin<span class="w"> </span>feature-listar
 </code></pre></div>
 <hr />
 <h1 id="4-integracion-y-conflicto-garantizado"><strong>4. Integración y conflicto garantizado</strong><a class="headerlink" href="#4-integracion-y-conflicto-garantizado" title="Permanent link">&para;</a></h1>
 <h3 id="1-mezclar-feature-anadir-en-main-entra-sin-conflicto">1. Mezclar <code>feature-anadir</code> en <code>main</code> (entra sin conflicto)<a class="headerlink" href="#1-mezclar-feature-anadir-en-main-entra-sin-conflicto" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>checkout<span class="w"> </span>main
-git<span class="w"> </span>merge<span class="w"> </span>feature-anadir
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>feature-anadir
+git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>merge<span class="w"> </span>origin/feature-anadir
 </code></pre></div>
 <h3 id="2-mezclar-feature-listar-en-main-entra-sin-conflicto">2. Mezclar <code>feature-listar</code> en <code>main</code> (entra sin conflicto)<a class="headerlink" href="#2-mezclar-feature-listar-en-main-entra-sin-conflicto" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>merge<span class="w"> </span>feature-listar
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>feature-anadir
+git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>merge<span class="w"> </span>origin/feature-listar
 </code></pre></div>
 <h3 id="3-mezclar-feature-borrar-en-main-conflicto-garantizado">3. Mezclar <code>feature-borrar</code> en <code>main</code> (conflicto garantizado)<a class="headerlink" href="#3-mezclar-feature-borrar-en-main-conflicto-garantizado" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>git<span class="w"> </span>merge<span class="w"> </span>feature-borrar
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>fetch<span class="w"> </span>feature-anadir
+git<span class="w"> </span>checkout<span class="w"> </span>main
+git<span class="w"> </span>merge<span class="w"> </span>feature-borrar
 </code></pre></div>
 <p>Git mostrará:</p>
 <div class="highlight"><pre><span></span><code>CONFLICT (content): Merge conflict in AlumnosApp.java
